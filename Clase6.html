@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+       
+<html>
+    <head>
+        <title>
+            Nuestro primer menu
+        </title>
+    <!-- Seteamos el estilo en la cabecera, solo codigo css (hoja de estilo en cascada) 
+         Le podemos dar a todas las etiquetas que tengan el mismo estilo , puede ser tambien segun el tipo de clase.
+         Las clases en css se determinan con un . (punto)
+         El !improtant le da prioridad sobre otro estilo
+         En el caso de la b, le estoy dando estilo a la etiqueda
+         El estilo para un ID se hace con un #, el ID tiene mayor relevancia q la clase--> 
+        <style>
+            .arial{
+                font-family: Arial;
+                font-size: large;
+                color: red !important;
+            }
+
+            b{
+                color: blue;
+                text-decoration: underline;
+            }
+            
+            #bLarga{
+                color: chocolate;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <h1 style="text-align: center; 
+                   font-family: Verdana, sans-serif;
+                   color: rgb(00, 00, 55);">
+            Titulo Superior
+        </h1> 
+        
+       
+        <div style="text-align: center; padding: 5px; border:rgb(35, 99, 151); border-top: 1px solid; border-bottom: 1px solid;">
+            <a href="https://www.google.com.ar/" target="_blank" style="margin: 10px; font-family: Verdana;">
+                Google
+            </a>
+            
+            <a href="https://es.wikipedia.org/" target="_blank" style="margin: 10px; font-family: Verdana;">
+                Wikipedia
+            </a>
+            
+            <a href="https://www.youtube.com/channel/UCHl0JQ8tdMUpJbvh_zHHU0g" target="_blank" style="margin: 10px; font-family: Verdana;">
+                JuacaxDev
+            </a>
+            
+            <a href="https://www.w3schools.com/" target="_blank" style="margin: 10px; font-family: Verdana;">
+                w3school
+            </a>
+
+        </div>
+
+        <p>
+            <!-- Etiqueta b: coloca negrita al texto (unicamente el estilo)
+                 Etiqueta strong: importancia mayor en el navegador (se ve como negrita)
+                 Etiqueta i: coloca cursiva
+                 Etiqueta em: texto enfatizado (se ve como cursiva)
+                 Etiqueta mark: texto marcado (por defecto le pone amarillo)
+                 Etiqueta small: texto pequeño
+                 Etiqueta del: eliminado (tacha el texto)
+                 Etiqueta ins: insertado (subraya un texto)
+                 Etiqueta sub:subindice
+                 Etiqueta sup:superindice
+            --> 
+            La <b class="arial">extensión</b>de los <strong>párrafos</strong> varía en relación con el tipo de texto que se <del>escribe</del> y con el soporte del texto. Por ejemplo,
+            si el texto se <mark>imprime en papel</mark>, se <i>recomienda</i> que haya <ins>entre tres</ins> y ocho párrafos por página. De todas formas, los <strong>párrafos</strong>
+            cortos son más recomendables, <small>porque</small> son más fáciles de leer y de <em>comprender</em>. <br>
+            2<sub>4</sub><br>
+            2<sup>4</sup><br>
+
+        </p>
+        <b>Probando edicion etiqueta</b> <br>
+        <b id="bLarga">Probando edicion etiqueta</b> <br> 
+    </body>
+
+</html>
