@@ -11,8 +11,105 @@
     </head>
 
     <body>
+        <h1 style="text-align: center; 
+                   font-family: Verdana, sans-serif;
+                   color: rgb(00, 00, 55);">
+            Titulo Superior
+        </h1> 
+        <div class="container">
+            <header class="d-flex justify-content-center py-3">
+              <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <!-- Al colocar aca data-bs-toggle="modal" y data-bs-target="#staticBackdrop me abre el modal de mas abajo -->
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@Pepe"
+                    class="nav-link" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pepe</font></font></a></li>
+                <li class="nav-item">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@Nacho"
+                    class="nav-link" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nacho</font></font></a></li>    
+                <li class="nav-item">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@Mica"
+                    class="nav-link" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mica</font></font></a></li>  
+                <li class="nav-item">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@Edgar"
+                    class="nav-link" ><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Edgar</font></font></a></li>    
     
+            </ul>
+            </header>
+        </div>
 
+        <!-- Los atributos mas importantes para que un link o boton llame al modal son:
+             data-bs-toggle="modal": que es lo que queremos que haga
+             data-bs-target="#staticBackdrop: se utiliza para buscar el ID(#) del modal que deseamos usar, en caso de ejemplo 
+             id="staticBackdrop"
+        -->
+        <!-- Modal 
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Mi Modal Estatico</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>-->
+
+        </div>
+        
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Recipient:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Message:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- Java script se agrega a continuacion debido a que es linea por linea, ya que si se coloca arriba el body no habia sido
+        creado -->
+        <script>
+            var exampleModal = document.getElementById('exampleModal')
+            exampleModal.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var recipient = button.getAttribute('data-bs-whatever')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var modalTitle = exampleModal.querySelector('.modal-title')
+            var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+            modalTitle.textContent = 'New message to ' + recipient
+            modalBodyInput.value = recipient
+            })
+        </script>
+        
     </body>
 
 </html>
